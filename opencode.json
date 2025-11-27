@@ -1,14 +1,22 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "agent": {
-    "build": {
-      "mode": "primary",
-      "model": "opencode/big-pickle",
-      "prompt": "{file:.opencode/prompts/better-coding-agent.txt}",
-      "tools": {
-        "write": true,
-        "edit": true,
-        "bash": true
+  $schema: https://opencode.ai/config.json,
+  agent: {
+    build: {
+      mode: primary,
+      model: opencode/big-pickle,
+      prompt: {file:.opencode/prompts/better-coding-agent.txt},
+      tools: {
+        write: false,
+        edit: false,
+        patch: false,
+        webfetch: false,
+        todoread: false,
+        todowrite: false,
+        bash: true,
+        read: true,
+        glob: true,
+        grep: true,
+        list: true
       }
     }
   }
